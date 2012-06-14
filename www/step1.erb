@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<strong>Step 1</strong></p>
+		<p>
+			&nbsp;</p>
+		<hr />
+		<p>
+			Choose job:</p>
+		<form action="go_jobs" id="go_jobs" method="get" name="c_jobs" target="_self">
+			Jobs:&nbsp;<select name="jjob">
+			<% job_array.each do |x| %>
+			<option value="<%=x%>"><%=x%></option>
+			<% end %>
+			</select>
+           <input name="jaddr" type="hidden" value="<%=myjaddr%>" />
+           <input name="jport" type="hidden" value="<%=myjport%>" />
+			&nbsp;<input name="submit" type="submit" value="submit" />&nbsp;</form>
+		<hr />
+		<p>
+			&nbsp;</p>
+			
+
+<!--
+#<script type="text/javascript">
+#var newURL = window.location.host.split(':')[0]
+#window.location='http://'+newURL+'/'
+#</script>
+-->
+
+	</body>
+</html>

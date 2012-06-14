@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p><strong>Step 3</strong></p>
+		<p>&nbsp;</p>
+		<hr />	Links :<br>
+             <% if !(jobs_links.nil? or  jobs_links.empty?) %>
+                <% jobs_links.each do |x| %>
+                    <a href="http://<%=myjaddr%>:<%=myjport%>/job/<%=myjob%>/<%=x.to_s%>">job:<%=x%></a>&nbsp;&nbsp;<a href="http://<%=myjaddr%>:<%=myjport%>/job/<%=myjob%>/<%=x.to_s%>/rebuild">rebuild</a><br>
+                <%end%>
+             <%end%>
+        <hr />
+		<p>&nbsp;</p>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<strong>Step 2</strong></p>
+		<p>
+			&nbsp;</p>
+		<hr />
+		<p>
+			Choose params for job <%=myjob%>:</p>
+		<form action="go_search" id="go_search" method="get" name="go_search" target="_self">
+			Param:&nbsp;<select name="jparam">
+			<% par_array.each do |x| %>
+			<option value="<%=x%>"><%=x%></option>
+			<% end %>
+			</select>&nbsp; Search value: &nbsp;<input name="jval" type="text" value="some_value" />
+            &nbsp; Number of last builds: &nbsp;<input name="jcount" type="text" value="30" />
+           <input name="jaddr" type="hidden" value="<%=myjaddr%>" />
+           <input name="jport" type="hidden" value="<%=myjport%>" />
+           <input name="jjob" type="hidden" value="<%=myjob%>" />
+			&nbsp;<input name="submit" type="submit" value="submit" />&nbsp;</form>
+		<hr />
+		<p>
+			&nbsp;</p>
+	</body>
+</html>
